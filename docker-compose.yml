@@ -21,7 +21,7 @@ services:
       MYSQL_USER: adminPanagia
       MYSQL_PASSWORD: EG13062009TY456
     ports:
-      - "3307:3306"
+      - "3309:3306"
     volumes:
       - db_laravel_data:/var/lib/mysql
 
