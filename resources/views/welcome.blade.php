@@ -24,11 +24,11 @@
                 
                 @if (Route::has('login'))
                     @auth
-                        <a href="{{ url('/dashboard') }}" class="text-[#d4af37] border border-[#d4af37] px-3 py-1 rounded hover:bg-[#d4af37] hover:text-black transition">Painel</a>
+                        <a href="https://super-umbrella-97wp9p6j5prpc7gwr-8081.app.github.dev/dashboard" class="text-[#d4af37] border border-[#d4af37] px-3 py-1 rounded hover:bg-[#d4af37] hover:text-black transition">Painel</a>
                     @else
-                        <a href="{{ route('login') }}" class="hover:text-[#d4af37] transition">Conecte-se</a>
+                        <a href="https://super-umbrella-97wp9p6j5prpc7gwr-8081.app.github.dev/login" class="hover:text-[#d4af37] transition">Conecte-se</a>
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="bg-[#d4af37] text-black px-3 py-1 rounded hover:bg-[#b89424] transition font-bold">Cadastre-se</a>
+                            <a href="https://super-umbrella-97wp9p6j5prpc7gwr-8081.app.github.dev/register" class="bg-[#d4af37] text-black px-3 py-1 rounded hover:bg-[#b89424] transition font-bold">Cadastre-se</a>
                         @endif
                     @endauth
                 @endif

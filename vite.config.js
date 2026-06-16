@@ -8,4 +8,10 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    server: {
+        hmr: {
+            host: 'super-umbrella-97wp9p6j5prpc7gwr-8081.app.github.dev',
+            protocol: 'wss',
+        },
+    },
 });

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panagia - Tradição Católica</title>
+    <title>Panagia - Tradição Oriental</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap');
@@ -31,9 +31,8 @@
                         <button type="submit" class="text-red-400 hover:text-red-300 transition uppercase tracking-wider text-xs border border-red-400/20 px-2 py-1 rounded hover:bg-red-400/5">Sair</button>
                     </form>
                 @else
-                    <a href="{{ route('login') }}" class="hover:text-[#d4af37] transition">Conecte-se</a>
-                    <a href="{{ route('register') }}" class="bg-[#d4af37] text-black px-3 py-1 rounded hover:bg-[#b89424] transition font-bold">Cadastre-se</a>
-                @endauth
+                    <a href="{{ secure_url('login') }}" class="hover:text-[#d4af37] transition">Conecte-se</a>
+                    <a href="{{ secure_url('register') }}" class="bg-[#d4af37] text-black px-3 py-1 rounded hover:bg-[#b89424] transition font-bold">Cadastre-se</a>
             </div>
         </div>
     </header>
