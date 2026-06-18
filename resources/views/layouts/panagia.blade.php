@@ -33,6 +33,7 @@
                 @else
                     <a href="{{ secure_url('login') }}" class="hover:text-[#d4af37] transition">Conecte-se</a>
                     <a href="{{ secure_url('register') }}" class="bg-[#d4af37] text-black px-3 py-1 rounded hover:bg-[#b89424] transition font-bold">Cadastre-se</a>
+                @endauth
             </div>
         </div>
     </header>
