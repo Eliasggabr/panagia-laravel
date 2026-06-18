@@ -26,7 +26,7 @@
                     <span class="text-[#8a8075] border-l border-[#3a3025] pl-6">Olá, <span class="text-[#e0dacc] font-bold">{{ Auth::user()->name }}</span>!</span>
                     <a href="/dashboard" class="text-[#d4af37] hover:underline">Painel</a>
                     
-                    <form method="POST" action="{{ route('logout') }}" class="inline">
+                    <form method="POST" action="{{ url('logout') }}" class="inline">
                         @csrf
                         <button type="submit" class="text-red-400 hover:text-red-300 transition uppercase tracking-wider text-xs border border-red-400/20 px-2 py-1 rounded hover:bg-red-400/5">Sair</button>
                     </form>
