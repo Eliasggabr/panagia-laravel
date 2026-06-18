@@ -28,7 +28,8 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
-        return redirect()->intended(route('/'));
+        // use path-based intended redirect to avoid resolving a non-existent named route
+        return redirect()->intended('/');
     }
 
     /**

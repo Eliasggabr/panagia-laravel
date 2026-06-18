@@ -46,6 +46,7 @@ class RegisteredUserController extends Controller
 
         Auth::login($user);
 
-        return redirect(route('/'));
+        // redirect to root path (avoid using route('/') which expects a named route)
+        return redirect('/');
     }
 }

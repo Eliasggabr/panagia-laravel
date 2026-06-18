@@ -20,7 +20,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        if (env('APP_ENV') !== 'local' || str_contains(request()->header('X-Forwarded-Host'), 'github.dev')) {
+        // If not local or we detect the Codespaces forwarded host, force https scheme.
+        $forwardedHost = (string) request()->header('X-Forwarded-Host');
+        if (env('APP_ENV') !== 'local' || str_contains($forwardedHost, 'github.dev')) {
             \URL::forceScheme('https');
         }
     }
