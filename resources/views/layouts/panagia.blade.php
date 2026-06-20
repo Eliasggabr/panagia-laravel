@@ -31,8 +31,8 @@
                         <button type="submit" class="text-red-400 hover:text-red-300 transition uppercase tracking-wider text-xs border border-red-400/20 px-2 py-1 rounded hover:bg-red-400/5">Sair</button>
                     </form>
                 @else
-                    <a href="{{ secure_url('login') }}" class="hover:text-[#d4af37] transition">Conecte-se</a>
-                    <a href="{{ secure_url('register') }}" class="bg-[#d4af37] text-black px-3 py-1 rounded hover:bg-[#b89424] transition font-bold">Cadastre-se</a>
+                    <a href="/login" class="hover:text-[#d4af37] transition">Conecte-se</a>
+                    <a href="/register" class="bg-[#d4af37] text-black px-3 py-1 rounded hover:bg-[#b89424] transition font-bold">Cadastre-se</a>
                 @endauth
             </div>
         </div>
