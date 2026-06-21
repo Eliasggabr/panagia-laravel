@@ -20,10 +20,18 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        // If not local or we detect the Codespaces forwarded host, force https scheme.
-        $forwardedHost = (string) request()->header('X-Forwarded-Host');
-        if (env('APP_ENV') !== 'local' || str_contains($forwardedHost, 'github.dev')) {
-            \URL::forceScheme('https');
+        if ($this->app->runningInConsole()) {
+            return;
+        }
+
+        $request = request();
+        $forwardedHost = (string) $request->headers->get('X-Forwarded-Host', '');
+        $forwardedProto = (string) $request->headers->get('X-Forwarded-Proto', '');
+
+        // Codespaces envia estes headers quando a porta 8081 e publica por HTTPS.
+        if (str_contains($forwardedHost, 'github.dev') || $forwardedProto === 'https') {
+            URL::forceRootUrl(config('app.url'));
+            URL::forceScheme('https');
         }
     }
 }
